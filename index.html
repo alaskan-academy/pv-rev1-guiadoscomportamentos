@@ -28,13 +28,16 @@
   }
 
   *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
+  html{ scroll-behavior:smooth; overflow-x:hidden; width:100%; max-width:100%; }
   body{
     margin:0;
     background: linear-gradient(308deg,#FBFBE8,#FDFFE1);
     color:var(--ink);
     font-family:var(--font-body);
     overflow-x:hidden;
+    width:100%;
+    max-width:100%;
+    position:relative;
   }
   img{ max-width:100%; display:block; }
   ul{ margin:0; padding-left:1.2em; }
@@ -228,7 +231,7 @@
   .about-card h2{ font-size:3rem; margin-bottom:20px; }
   .about-card p{ font-size:1.25rem; }
   .social-row{ display:flex; gap:24px; align-items:center; margin-top:16px; flex-basis:100%; }
-  .social-row img{ width:55%; max-width:380px; }
+  .social-row img{ width:100%; max-width:520px; border-radius:12px; }
 
   /* ============ S11 FAQ ============ */
   .s11{ background:var(--cream); padding-top:120px; padding-bottom:120px; }
@@ -624,8 +627,7 @@
         <p>Helena acredita que todo professor merece dar aula sem precisar gritar, sem ameaçar e sem se esgotar emocionalmente.</p>
         <p>Hoje, você pode ter acesso a uma parte do seu legado.</p>
         <div class="social-row">
-          <img src="imagens/instagram.webp" alt="Instagram">
-          <img src="imagens/tiktok.webp" alt="TikTok">
+          <img src="imagens/social-proof.webp" alt="Instagram e TikTok de Helena Costa">
         </div>
       </div>
     </div>
