@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Comportamento na Sala de Aula | Helena Costa</title>
+<meta name="description" content="Desbloqueie o guia com respostas prontas, validadas pela neurociência, para agir com segurança e firmeza em sala de aula.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Shantell+Sans:wght@400;500;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#AC7CAE;
+    --purple-dark:#822C86;
+    --blue:#8BBCDC;
+    --yellow:#FFDE59;
+    --cream:#FBFBE8;
+    --cream2:#FDFFD3;
+    --red:#E05C50;
+    --green:#59A84A;
+    --pink:#FAADA0;
+    --ink:#171D20;
+    --ink2:#343642;
+    --white:#FFFFFF;
+    --font-display:'Lilita One', system-ui, sans-serif;
+    --font-body:'Shantell Sans', system-ui, sans-serif;
+    --font-footer:'Poppins', system-ui, sans-serif;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background: linear-gradient(308deg,#FBFBE8,#FDFFE1);
+    color:var(--ink);
+    font-family:var(--font-body);
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  ul{ margin:0; padding-left:1.2em; }
+  section{ padding:64px 32px; }
+  .wrap{ max-width:1180px; margin:0 auto; }
+  .center{ text-align:center; }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:400; letter-spacing:-1px; margin:0; line-height:1.15; text-wrap:balance; }
+  p{ margin:0 0 16px; line-height:1.5; }
+  p:last-child{ margin-bottom:0; }
+  .destaque{ color:var(--purple-dark); }
+
+  .btn{
+    display:inline-block;
+    font-family:var(--font-body);
+    font-weight:500;
+    font-size:1.125rem;
+    padding:18px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    transition:box-shadow .25s ease, transform .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-cream{ background:var(--cream); color:#262730; box-shadow:0 0 0 4px rgba(251,251,232,.51); }
+  .btn-cream:hover{ box-shadow:0 0 0 10px rgba(251,251,232,.45); }
+  .btn-red{ background:var(--red); color:#fff; box-shadow:0 0 0 4px rgba(224,92,80,.51); }
+  .btn-red:hover{ box-shadow:0 0 0 10px rgba(224,92,80,.45); }
+  .btn-green{ background:var(--green); color:#fff; box-shadow:0 0 0 4px rgba(89,168,74,.35); }
+  .btn-green:hover{ box-shadow:0 0 0 10px rgba(89,168,74,.3); }
+
+  .icon-item{ display:flex; align-items:center; gap:10px; }
+  .icon-item img{ width:44px; height:auto; flex:none; }
+  .icon-item span{ font-size:1.125rem; }
+
+  /* ============ HERO ============ */
+  .hero{ background:#FFFFFF; padding-top:40px; padding-bottom:80px; }
+  .hero h1{ font-size:3rem; max-width:900px; margin:0 auto; }
+  .hero .subtitle{ font-family:var(--font-body); font-size:1.6rem; max-width:700px; margin:20px auto 0; }
+  .hero .hero-image{ max-width:50%; margin:48px auto 0; }
+  .hero-badges{ display:flex; flex-wrap:wrap; justify-content:center; gap:24px; padding:56px 24px 0; }
+  .hero-badges .icon-item{ background:#fff; padding:10px 30px; border-radius:16px; }
+
+  /* ============ S2 ============ */
+  .s2 .wrap{ display:flex; flex-direction:column; align-items:center; gap:24px; }
+  .s2 img{ width:54%; margin:0 auto; border-radius:16px; }
+  .s2 p{ font-size:1.5rem; text-align:center; max-width:680px; }
+
+  /* ============ S3 ============ */
+  .s3{ background:var(--purple); color:#fff; padding-top:120px; padding-bottom:120px; }
+  .s3 h2{ color:#fff; font-size:3rem; text-align:center; max-width:900px; margin:0 auto 32px; }
+  .s3-tags{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:56px; }
+  .s3-tags .icon-item{ background:#f7f8f8; border:1px solid #333643; border-radius:16px; padding:10px 30px; color:var(--ink2); }
+  .s3-tags .icon-item img{ width:24px; height:auto; }
+
+  .s3-video-row{ display:flex; gap:40px; align-items:center; flex-wrap:wrap; justify-content:center; }
+  .s3-video-row video{ width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+  .s3-video-col{ flex:1 1 460px; max-width:520px; }
+  .s3-text-col{ flex:1 1 380px; max-width:460px; color:var(--ink); }
+  .s3-text-col h3{ font-family:var(--font-body); font-weight:700; font-size:2rem; color:#FFE500; margin-bottom:16px; }
+  .s3-text-col p{ font-size:1.25rem; margin-bottom:24px; }
+
+  /* ============ S4 ============ */
+  .s4{ background:var(--cream); padding-top:120px; padding-bottom:120px; }
+  .s4 h2{ font-size:3rem; text-align:center; color:var(--purple); max-width:920px; margin:0 auto 32px; }
+  .s4 .cta-center{ text-align:center; margin-bottom:64px; }
+
+  .bio-card{ background:var(--yellow); border-radius:20px; padding:20px; display:flex; gap:24px; margin-bottom:64px; }
+  .bio-card figure{ flex:0 0 42%; margin:0; border:1px solid rgba(224,92,80,.09); border-radius:10px; overflow:hidden; }
+  .bio-card .bio-text{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:12px; }
+  .bio-card .bio-text p{ font-size:1.25rem; margin:0; }
+
+  .proof-title{ font-size:2rem; font-weight:700; font-family:var(--font-body); text-align:center; margin-bottom:32px; }
+  .proof-grid{ display:grid; grid-template-columns:repeat(3,1fr); align-items:center; gap:10px; }
+  .proof-grid img{ width:100%; height:auto; display:block; border-radius:10px; box-shadow:0 2px 10px rgba(23,29,32,.15); }
+
+  /* ============ S5 ============ */
+  .s5{ background:var(--cream); padding-top:32px; padding-bottom:64px; }
+  .s5-top{ display:flex; gap:32px; flex-wrap:wrap; margin-bottom:40px; }
+  .s5-top .col{ flex:1 1 380px; }
+  .s5-top h2{ font-size:3rem; text-align:left; margin-bottom:20px; }
+  .s5-top .col p{ font-size:1.25rem; text-align:left; }
+  .s5-nots .icon-item{ font-weight:600; color:var(--red); margin-bottom:20px; }
+  .s5-nots .icon-item img{ width:16px; height:16px; }
+
+  .s5-bottom{ display:flex; gap:40px; align-items:center; flex-wrap:wrap; }
+  .s5-bottom .img-col{ flex:1 1 380px; }
+  .s5-bottom .img-col img{ width:90%; max-width:500px; margin:0 auto; }
+  .s5-bottom .text-col{ flex:1 1 380px; }
+  .s5-bottom .text-col p{ font-size:1.25rem; }
+  .s5-bottom .text-col .btn{ margin-top:24px; }
+
+  /* ============ S6 pilares ============ */
+  .s6-pilares{ background:var(--blue); padding-top:32px; padding-bottom:64px; }
+  .s6-pilares h2{ font-size:3rem; text-align:center; margin-bottom:40px; }
+  .pilares-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-bottom:48px; }
+  .pilar-card{ background:#fff; border-radius:16px; padding:30px; }
+  .pilar-card .num{ font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--purple); margin-bottom:12px; }
+  .pilar-card h3{ font-family:var(--font-body); font-weight:700; font-size:1.4rem; margin-bottom:12px; }
+  .pilar-card p{ font-size:1.25rem; color:var(--ink2); }
+
+  .stage-title{ font-family:var(--font-body); font-weight:500; font-size:2rem; text-align:center; margin-bottom:32px; }
+  .stage-photos{ display:flex; gap:32px; margin-bottom:48px; }
+  .stage-photos > div{ flex:1; border-radius:16px; overflow:hidden; }
+  .stage-photos img{ width:100%; height:auto; display:block; }
+  .also-works{ font-family:var(--font-body); font-weight:400; font-size:2rem; text-align:center; max-width:900px; margin:0 auto; }
+
+  /* ============ S6b conheça por dentro ============ */
+  .s6b{ background:var(--cream); padding-top:120px; padding-bottom:120px; }
+  .s6b h2{ font-size:3rem; text-align:center; margin-bottom:40px; }
+  .feature-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-bottom:48px; }
+  .feature-card{ border-radius:16px; padding:30px; }
+  .feature-card h3{ font-family:var(--font-body); font-weight:700; font-size:1.4rem; margin-bottom:12px; }
+  .feature-card p, .feature-card li{ font-size:1.25rem; }
+  .fc-purple{ background:var(--purple); color:var(--ink); }
+  .fc-blue{ background:var(--blue); }
+  .fc-white{ background:#fff; color:var(--ink2); }
+  .fc-yellow{ background:var(--yellow); }
+  .s6b .cta-center{ text-align:center; margin-bottom:48px; }
+  .s6b .science-text{ max-width:820px; margin:0 auto 48px; text-align:center; }
+  .s6b .science-text p{ font-size:1.25rem; }
+
+  .modules-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:start; }
+  .module-card{ border-radius:16px; padding:30px; }
+  .module-card .thumb{ border-radius:10px; margin-bottom:16px; overflow:hidden; }
+  .module-card .thumb img{ width:100%; height:auto; display:block; }
+  .module-card ul{ font-size:1.15rem; padding-left:1.1em; }
+  .module-yellow{ background:var(--yellow); }
+  .module-blue{ background:var(--blue); }
+
+  /* ============ S7 bonus ============ */
+  .s7{ background:var(--purple); color:#fff; }
+  .s7 h2{ color:#fff; font-size:3rem; text-align:center; margin-bottom:16px; }
+  .s7 .lead{ color:#fff; font-size:1.25rem; text-align:center; max-width:640px; margin:0 auto 48px; }
+  .bonus-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+  .bonus-card{ background:#fff; border-radius:16px; padding:30px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; }
+  .bonus-card img{ width:55%; max-width:220px; }
+  .bonus-card h3{ font-family:var(--font-body); font-weight:700; font-size:1.4rem; color:var(--ink2); margin:0; }
+  .bonus-card p{ font-size:1.25rem; color:var(--ink2); margin:0; }
+
+  /* ============ S8 pagamento ============ */
+  .s8{ background:var(--cream); padding-top:120px; padding-bottom:120px; }
+  .s8 h2{ font-size:3rem; text-align:center; margin-bottom:32px; }
+  .price-cards{ margin-bottom:48px; }
+  .price-table{ background:var(--purple); border-radius:20px; padding:36px; max-width:760px; margin:0 auto; }
+  .price-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:18px; }
+  .price-list li{ display:flex; justify-content:space-between; gap:20px; }
+  .price-list .item{ display:flex; align-items:flex-start; gap:10px; flex:1; min-width:0; font-size:1.3rem; color:#fff; }
+  .price-list .item img{ width:20px; height:auto; margin-top:6px; flex:none; }
+  .price-list .price{ flex:none; padding-left:16px; border-left:1px solid rgba(255,255,255,.35); white-space:nowrap; font-size:1.3rem; color:#fff; }
+  .price-total{ display:flex; justify-content:space-between; align-items:center; margin-top:28px; padding-top:24px; border-top:2px solid rgba(255,255,255,.4); }
+  .price-total span{ font-family:var(--font-display); font-size:2.4rem; color:var(--yellow); }
+  .fair-price{ text-align:center; max-width:820px; margin:0 auto 48px; }
+  .fair-price p{ font-size:1.25rem; text-align:left; }
+
+  .checkout-card{ background:var(--red); color:#fff; border-radius:20px; padding:40px; max-width:560px; margin:0 auto; }
+  .checkout-card img.guide-shot{ width:100%; border-radius:12px; margin-bottom:24px; }
+  .checkout-card h3{ font-family:var(--font-display); font-size:2rem; margin-bottom:20px; }
+  .checkout-list{ list-style:none; padding:0; margin:0 0 24px; display:flex; flex-direction:column; gap:10px; }
+  .checkout-list li{ display:flex; gap:10px; align-items:center; font-size:1.125rem; }
+  .checkout-list img{ width:24px; }
+  .old-price-row{ display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+  .old-price-row .label{ font-size:1.25rem; }
+  .old-price-row .price{ font-family:var(--font-display); font-size:2rem; text-decoration:line-through; opacity:.85; }
+  .discount-box{ background:var(--yellow); color:var(--ink); border-radius:12px; padding:16px; text-align:center; margin-bottom:24px; }
+  .discount-box h4{ font-family:var(--font-display); font-weight:400; font-size:2rem; margin:0 0 8px; }
+  .discount-box .price-big{ font-family:var(--font-display); font-size:3rem; }
+  .discount-box .installments{ font-size:1.25rem; }
+  .checkout-card .btn{ display:block; text-align:center; }
+
+  .guarantee-row{ display:flex; align-items:center; gap:32px; padding:84px 0; flex-wrap:wrap; }
+  .guarantee-row img.badge{ width:120px; flex:none; }
+  .guarantee-row h2{ font-size:3rem; margin-bottom:16px; }
+  .guarantee-row .text-col{ flex:1 1 480px; }
+  .guarantee-row p{ font-size:1.25rem; }
+
+  /* ============ S9 video CTA ============ */
+  .s9{ background:var(--blue); padding-top:120px; padding-bottom:120px; }
+  .s9-row{ display:flex; align-items:center; gap:40px; flex-wrap:wrap; }
+  .s9-row video{ width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+  .s9-video-col{ flex:1 1 460px; max-width:540px; }
+  .s9-text-col{ flex:1 1 380px; max-width:480px; }
+  .s9-text-col h2{ font-size:3rem; margin-bottom:24px; }
+
+  /* ============ S10 sobre ============ */
+  .s10{ padding-top:120px; padding-bottom:120px; }
+  .about-card{ background:var(--yellow); border-radius:20px; padding:20px; display:flex; gap:32px; flex-wrap:wrap; }
+  .about-card figure{ flex:1 1 380px; max-width:420px; margin:0; border-radius:12px; overflow:hidden; }
+  .about-card figure img{ width:100%; height:auto; display:block; }
+  .about-card .about-text{ flex:1 1 420px; }
+  .about-card h2{ font-size:3rem; margin-bottom:20px; }
+  .about-card p{ font-size:1.25rem; }
+  .social-row{ display:flex; gap:24px; align-items:center; margin-top:16px; flex-basis:100%; }
+  .social-row img{ width:55%; max-width:380px; }
+
+  /* ============ S11 FAQ ============ */
+  .s11{ background:var(--cream); padding-top:120px; padding-bottom:120px; }
+  .s11 h2{ font-size:3rem; text-align:center; margin-bottom:40px; }
+  .faq{ display:flex; flex-direction:column; gap:12px; margin-bottom:48px; }
+  .faq details{ background:#fff; border-radius:14px; padding:0; overflow:hidden; }
+  .faq summary{ list-style:none; cursor:pointer; padding:20px 24px; font-family:var(--font-body); font-weight:600; font-size:1.15rem; display:flex; justify-content:space-between; align-items:center; gap:16px; color:var(--ink); }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary::after{ content:'+'; font-size:1.6rem; line-height:1; color:var(--purple); transition:transform .2s ease; flex:none; }
+  .faq details[open] summary::after{ transform:rotate(45deg); }
+  .faq .faq-body{ padding:0 24px 22px; color:var(--ink2); font-size:1.1rem; }
+  .faq .faq-body p{ font-size:1.05rem; }
+  .s11 .cta-center{ text-align:center; }
+
+  /* ============ Footer ============ */
+  footer{ background:var(--pink); padding:32px; text-align:center; }
+  footer p{ font-family:var(--font-footer); font-size:0.87rem; font-weight:500; margin:0; }
+
+  /* ============ Responsive ============ */
+  @media (max-width:900px){
+    .pilares-grid, .feature-grid, .modules-grid, .bonus-grid{ grid-template-columns:1fr; }
+    .module-card .thumb{ max-width:260px; margin-left:auto; margin-right:auto; }
+  }
+
+  @media (max-width:768px){
+    section{ padding:40px 16px; }
+    .hero{ padding-top:30px; padding-bottom:80px; }
+    .s3{ padding-top:40px; padding-bottom:40px; }
+    .s4{ padding-top:24px; padding-bottom:24px; }
+    .s5{ padding-top:24px; padding-bottom:64px; }
+    .s6-pilares{ padding-top:24px; padding-bottom:48px; }
+    .s6b, .s8, .s9, .s10, .s11{ padding-top:48px; padding-bottom:48px; }
+    .hero h1{ font-size:2.1rem; }
+    .hero .subtitle{ font-size:1.125rem; }
+    .hero .hero-image{ max-width:75%; }
+    h2{ font-size:2rem !important; text-align:left; }
+    .s3 h2, .s4 h2, .s6-pilares h2, .s6b h2, .s7 h2, .s8 h2, .s11 h2{ text-align:left; }
+    .s2 img{ width:100%; }
+    .s2 p{ font-size:1.125rem; text-align:left; }
+    .s3-tags{ justify-content:flex-start; }
+    .s3-video-row{ flex-direction:column; align-items:stretch; }
+    .s3-video-col, .s3-text-col{ flex:none; max-width:none; }
+    .bio-card{ flex-direction:column; align-items:center; text-align:center; }
+    .bio-card figure{ flex:none; width:150px; height:150px; border-radius:50%; margin:0 auto; }
+    .bio-card figure img{ width:100%; height:100%; object-fit:cover; }
+    .bio-card .bio-text{ align-items:center; }
+    .proof-grid{ grid-template-columns:1fr; gap:16px; }
+    .s5-top h2{ font-size:2rem; }
+    .s5-bottom{ flex-direction:column; }
+    .s5-bottom .img-col, .s5-bottom .text-col{ flex:none; }
+    .stage-photos{ flex-direction:column; }
+    .also-works{ font-size:1.4rem; text-align:left; }
+    .guarantee-row{ padding:48px 0; flex-direction:column; align-items:flex-start; }
+    .guarantee-row .text-col{ flex:none; }
+    .checkout-card{ padding:24px; }
+    .discount-box .price-big{ font-size:2.2rem; }
+    .about-card{ flex-direction:column; }
+    .about-card figure, .about-card .about-text{ flex:none; max-width:none; }
+    .price-table{ padding:24px; }
+    .price-list li{ flex-direction:column; gap:6px; }
+    .price-list .item, .price-list .price{ font-size:1.15rem; }
+    .price-list .price{ border-left:none; padding-left:0; align-self:flex-end; font-weight:600; }
+    .price-total span{ font-size:2rem; }
+    .btn{ display:block; text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO / S1 ===================== -->
+<section class="hero">
+  <div class="wrap center">
+    <h1>Professor: saiba exatamente o que fazer na sala de aula com alunos de 0 a 14 anos!</h1>
+    <p class="subtitle">Desbloqueie o guia com respostas prontas, validadas pela neurociência, para agir com segurança e firmeza.</p>
+    <img class="hero-image" src="imagens/group_6-scaled.webp" alt="Guia do Comportamento na Sala de Aula">
+  </div>
+  <div class="hero-badges wrap">
+    <div class="icon-item"><img src="imagens/03-1.svg" alt=""><span>Escolas públicas e privadas</span></div>
+    <div class="icon-item"><img src="imagens/02.svg" alt=""><span>Funciona mesmo em turmas impossíveis</span></div>
+    <div class="icon-item"><img src="imagens/01.svg" alt=""><span>Baseado na Neurociência</span></div>
+  </div>
+</section>
+
+<!-- ===================== S2 ===================== -->
+<section class="s2">
+  <div class="wrap">
+    <img src="imagens/fotohelenaPag.webp" alt="Helena Costa">
+    <p>A faculdade não ensinou o professor a lidar, de forma prática, com o que realmente acontece dentro de uma sala de aula.</p>
+    <p>Mesmo assim, na hora em que a criança chora por 40 minutos, joga tudo no chão, o adolescente xinga e desafia sua autoridade, parece que todos <strong>esperam que você simplesmente saiba o que fazer.</strong></p>
+  </div>
+</section>
+
+<!-- ===================== S3 ===================== -->
+<section class="s3">
+  <div class="wrap">
+    <h2>O problema é que comportamentos difíceis não esperam você pesquisar e aprender.</h2>
+    <div class="s3-tags">
+      <div class="icon-item"><img src="imagens/setaAmarela.svg" alt=""><span>Na frente da turma inteira;</span></div>
+      <div class="icon-item"><img src="imagens/setaAmarela.svg" alt=""><span>No momento mais corrido do dia;</span></div>
+      <div class="icon-item"><img src="imagens/setaAmarela.svg" alt=""><span>Quando você já está cansada;</span></div>
+      <div class="icon-item"><img src="imagens/setaAmarela.svg" alt=""><span>Muitas vezes, sem apoio nenhum.</span></div>
+    </div>
+
+    <div class="s3-video-row">
+      <div class="s3-video-col">
+        <video class="lazy-video" autoplay loop muted playsinline>
+          <source media="(max-width: 767px)" src="imagens/videos/video1_mobile.mp4" type="video/mp4">
+          <source media="(min-width: 768px)" src="imagens/videos/video1_desktop.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="s3-text-col">
+        <h3>Você precisa responder na hora.</h3>
+        <p>O ideal seria ter as respostas na ponta da língua, na palma da mão, organizadas de uma forma tão simples que desse até mesmo para <b>consultar em tempo real.</b></p>
+        <a href="#pay" class="btn btn-cream">QUERO AGORA!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S4 ===================== -->
+<section class="s4">
+  <div class="wrap">
+    <h2>É exatamente por isso que eu criei o <span class="destaque">Guia do Comportamento na Sala de Aula,</span> um <u>material completo</u> e consultável, com aulas gravadas e PDF, para você nunca mais passar aperto quando um comportamento desafia você!</h2>
+    <div class="cta-center"><a href="#pay" class="btn btn-red">QUERO AGORA!</a></div>
+
+    <div class="bio-card">
+      <figure><img src="imagens/foto02.webp" alt="Helena Costa"></figure>
+      <div class="bio-text">
+        <p>Meu nome é <b>Helena Costa,</b> sou mestre em Educação da Primeira Infância, formada na Austrália.</p>
+        <p>Nos últimos 10 anos, ajudei milhares de professores a recuperarem a autoridade, a escuta e o prazer de ensinar sem gritar, sem ameaçar e sem se esgotar emocionalmente.</p>
+        <p>O que eu ensino aqui não nasceu de teoria distante da prática.</p>
+        <p>Nasceu da realidade da sala de aula, do que funciona de verdade, e de uma forma de olhar para o comportamento que une acolhimento, firmeza e base no desenvolvimento infantil e adolescente.</p>
+      </div>
+    </div>
+
+    <p class="proof-title">Milhares de professores já aplicaram os ensinamentos deste guia:</p>
+    <div class="proof-grid">
+      <img src="imagens/21-e1778730411922.webp" alt="Depoimento">
+      <img src="imagens/22-e1778730464424.webp" alt="Depoimento">
+      <img src="imagens/23-e1778730486704.webp" alt="Depoimento">
+      <img src="imagens/24-e1778730507341.webp" alt="Depoimento">
+      <img src="imagens/25-e1778730536535.webp" alt="Depoimento">
+      <img src="imagens/26-e1778730553272.webp" alt="Depoimento">
+      <img src="imagens/29-e1778730583493.webp" alt="Depoimento">
+      <img src="imagens/30-e1778730607288.webp" alt="Depoimento">
+      <img src="imagens/33-e1778730628335.webp" alt="Depoimento">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S5 ===================== -->
+<section class="s5">
+  <div class="wrap">
+    <div class="s5-top">
+      <div class="col">
+        <h2>O Guia do Comportamento vai ser um verdadeiro mapa para o seu dia a dia.</h2>
+        <p>Você recebe rotinas curtas e estratégias testadas, que funcionam em escolas públicas ou privadas, mesmo com crianças e adolescentes agitados, e mesmo que você já sinta ter perdido todo o controle.</p>
+      </div>
+      <div class="col s5-nots">
+        <div class="icon-item"><img src="imagens/x.svg" alt=""><span>Não é só mais um curso sobre comportamento infantil</span></div>
+        <div class="icon-item"><img src="imagens/x.svg" alt=""><span>Não são frases prontas para decorar</span></div>
+        <div class="icon-item"><img src="imagens/x.svg" alt=""><span>Não é um material vago cheio de dica solta</span></div>
+      </div>
+    </div>
+
+    <div class="s5-bottom">
+      <div class="img-col"><img src="imagens/iphoneefotoss.webp" alt="Guia no celular"></div>
+      <div class="text-col">
+        <p>O Guia é um material prático, organizado por faixa etária e por situações reais do dia a dia escolar, criado para mostrar o motivo por trás de cada comportamento e como agir em cada caso.</p>
+        <p>Ele responde às necessidades concretas de quem está no dia a dia da escola, oferecendo um caminho claro para interpretar o comportamento e escolher a melhor intervenção para aquela idade e para aquela situação.</p>
+        <a href="#pay" class="btn btn-red">DESBLOQUEAR MEU ACESSO</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S6 PILARES ===================== -->
+<section class="s6-pilares">
+  <div class="wrap">
+    <h2>O Guia do Comportamento tem 3 pilares centrais</h2>
+    <div class="pilares-grid">
+      <div class="pilar-card">
+        <div class="num">01</div>
+        <h3>Conteúdo organizado por idade</h3>
+        <p>Você localiza rapidamente a etapa escolar que mais tem a ver com a sua realidade;</p>
+      </div>
+      <div class="pilar-card">
+        <div class="num">02</div>
+        <h3>Explicação do comportamento</h3>
+        <p>Você entende o que está por trás de cada situação, em vez de olhar apenas para o sintoma;</p>
+      </div>
+      <div class="pilar-card">
+        <div class="num">03</div>
+        <h3>Orientação prática de intervenção</h3>
+        <p>Você aprende o que fazer na hora, com exemplos concretos e estratégias adequadas para cada fase.</p>
+      </div>
+    </div>
+
+    <p class="stage-title">É por isso que ele funciona para qualquer etapa do aprendizado:</p>
+    <div class="stage-photos">
+      <div><img src="imagens/aula05_1x.webp" alt=""></div>
+      <div><img src="imagens/aula04_1x.webp" alt=""></div>
+      <div><img src="imagens/aula01_1x.webp" alt=""></div>
+    </div>
+
+    <p class="also-works">Também funciona para <b>escolas públicas, escolas particulares, aulas de reforço</b> e qualquer outro tipo de interação professor-aluno!</p>
+  </div>
+</section>
+
+<!-- ===================== S6B CONHEÇA POR DENTRO ===================== -->
+<section class="s6b">
+  <div class="wrap">
+    <h2>Conheça o Guia do Comportamento por dentro</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card fc-purple">
+        <h3>Curso completo com mais de 60 aulas e recursos</h3>
+        <p>Você recebe acesso ao curso completo, com uma estrutura pensada para facilitar tanto o estudo quanto a consulta prática no dia a dia. O conteúdo começa com uma base introdutória sobre comportamento e desenvolvimento, depois se organiza por etapa escolar.</p>
+      </div>
+      <div class="feature-card fc-blue">
+        <h3>Organização por faixa etária</h3>
+        <p>O curso cobre alunos de 0 a 14 anos, com módulos específicos para diferentes fases da vida escolar.<br>São trabalhadas situações comuns e difíceis em:</p>
+        <ul><li>Maternal;</li><li>Educação Infantil;</li><li>Ensino Fundamental 1;</li><li>Ensino Fundamental 2;</li><li>Ensino Médio.</li></ul>
+      </div>
+      <div class="feature-card fc-white">
+        <h3>Apostila completa e materiais extras</h3>
+        <p>Além das aulas, você recebe apostila completa, recursos extras e indicações complementares para consultar quando quiser aprofundar sua aplicação.</p>
+      </div>
+      <div class="feature-card fc-yellow">
+        <h3>Acesso imediato e vitalício</h3>
+        <p>Você entra e já pode começar a assistir. O acesso é vitalício, para que você consulte o material sempre que precisar.</p>
+      </div>
+    </div>
+
+    <div class="cta-center"><a href="#pay" class="btn btn-red">QUERO MEU GUIA AGORA</a></div>
+
+    <div class="science-text">
+      <p>Todo o conteúdo do Guia do Comportamento é cientificamente fundamentado, seguindo <b>princípios da Neurociência na sala de aula.</b></p>
+      <p>A organização por faixa etária ajuda você a se localizar mais depressa, e direciona seu aprendizado quando você quiser se aprofundar no conteúdo:</p>
+    </div>
+
+    <div class="modules-grid">
+      <div class="module-card module-yellow">
+        <div class="thumb"><img src="imagens/aula06_1x.webp" alt=""></div>
+        <ul><li>Estratégias básicas para entender o comportamento</li><li>O comportamento em cada idade</li></ul>
+      </div>
+      <div class="module-card module-yellow">
+        <div class="thumb"><img src="imagens/aula05_1x.webp" alt=""></div>
+        <ul><li>Choro frequente;</li><li>Bater ou empurrar; morder;</li><li>Dificuldade em dividir brinquedos;</li><li>Jogar objetos no chão; birra;</li><li>Correr nas transições;</li><li>Resistência à troca, à soneca e à alimentação;</li><li>Ansiedade de separação.</li></ul>
+      </div>
+      <div class="module-card module-yellow">
+        <div class="thumb"><img src="imagens/aula04_1x.webp" alt=""></div>
+        <ul><li>Choros frequentes;</li><li>Birras;</li><li>Interrupções constantes;</li><li>Gritos;</li><li>Fuga da sala;</li><li>Insistência em fazer do próprio jeito;</li><li>Dificuldade em seguir combinados;</li><li>Dificuldade em compartilhar;</li><li>Agressividade;</li><li>Mentiras.</li></ul>
+      </div>
+      <div class="module-card module-blue">
+        <div class="thumb"><img src="imagens/aula03_1x.webp" alt=""></div>
+        <ul><li>Falar fora de hora;</li><li>Conversa excessiva;</li><li>Desorganização;</li><li>Competitividade exagerada;</li><li>Mentiras;</li><li>Comportamentos para chamar atenção;</li><li>Resistência a tarefas;</li><li>Frustração exagerada;</li><li>Reclamações constantes;</li><li>Bullying verbal velado.</li></ul>
+      </div>
+      <div class="module-card module-blue">
+        <div class="thumb"><img src="imagens/aula02_1x.webp" alt=""></div>
+        <ul><li>Questionamento de autoridade;</li><li>Respostas atravessadas;</li><li>Isolamento social;</li><li>Provocações e discussões;</li><li>Recusa de trabalho em grupo;</li><li>Dificuldade com críticas;</li><li>Desorganização;</li><li>Reclamações;</li><li>Temas como nome social e pedidos frequentes para ir ao banheiro.</li></ul>
+      </div>
+      <div class="module-card module-blue">
+        <div class="thumb"><img src="imagens/aula01_1x.webp" alt=""></div>
+        <ul><li>Cinismo e sarcasmo;</li><li>Desdém por regras;</li><li>Liderança negativa;</li><li>Desrespeito passivo-agressivo;</li><li>Conteúdo impróprio em sala;</li><li>Isolamento;</li><li>Conflitos verbais;</li><li>Recusa de trabalho coletivo;</li><li>Dificuldade com críticas;</li><li>Bullying verbal velado.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S7 BÔNUS ===================== -->
+<section class="s7">
+  <div class="wrap">
+    <h2>E tem mais:</h2>
+    <p class="lead">Desbloqueando hoje o seu acesso ao guia, eu tenho mais <b>dois presentes</b> para você:</p>
+
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <h3>🎁Grupo VIP no WhatsApp</h3>
+        <img src="imagens/whats.webp" alt="">
+        <p>Um espaço para trocar experiências, compartilhar aplicação prática e tirar dúvidas junto de outros professores.</p>
+      </div>
+      <div class="bonus-card">
+        <h3>🎁Volta às Aulas Serena</h3>
+        <img src="imagens/aulas.webp" alt="">
+        <p>Um conteúdo com 5 aulas exclusivas para ajudar professoras a reconstruir vínculo, tranquilidade e regulação da turma após férias ou momentos de quebra de rotina.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S8 PAGAMENTO ===================== -->
+<section class="s8" id="pay">
+  <div class="wrap">
+    <h2>Se esse material fosse vendido em partes, você pagaria:</h2>
+    <div class="price-cards">
+      <div class="price-table">
+        <ul class="price-list">
+          <li>
+            <span class="item"><img src="imagens/setaAmarela.svg" alt="">Curso completo com mais de 60 aulas e recursos</span>
+            <span class="price">R$ 797</span>
+          </li>
+          <li>
+            <span class="item"><img src="imagens/setaAmarela.svg" alt="">Material em PDF de consulta prática para apoio</span>
+            <span class="price">R$ 127</span>
+          </li>
+          <li>
+            <span class="item"><img src="imagens/setaAmarela.svg" alt="">Grupo de acompanhamento e troca</span>
+            <span class="price">R$ 267</span>
+          </li>
+          <li>
+            <span class="item"><img src="imagens/setaAmarela.svg" alt="">Conteúdo extra específico para volta às aulas</span>
+            <span class="price">R$ 127</span>
+          </li>
+          <li>
+            <span class="item"><img src="imagens/setaAmarela.svg" alt="">Acesso vitalício para consulta recorrente</span>
+            <span class="price">não tem preço</span>
+          </li>
+        </ul>
+        <div class="price-total"><span>Total</span><span>R$ 1318</span></div>
+      </div>
+    </div>
+
+    <div class="fair-price">
+      <h2 class="center" style="margin-bottom:24px;">É um valor justo pelo que entrega.</h2>
+      <p>Mas eu sei que não é todo mundo que tem esse valor disponível agora para investir em conhecimento.</p>
+      <p>Como a minha proposta aqui é ajudar o maior número possível de professores, <b>eu não quero que o valor seja um empecilho.</b></p>
+      <p>E foi por isso que, junto com a minha equipe, cheguei ao menor valor possível para que eu pudesse continuar divulgando esse conhecimento sem levar prejuízo, uma vez que existem custos para manter tudo isso no ar.</p>
+      <p><b>Nós chegamos a um valor de <span style="color:#e05c50;">R$ 297,</span> mas hoje eu quero ser ainda mais radical.</b></p>
+    </div>
+
+    <div class="checkout-card">
+      <img class="guide-shot" src="imagens/group_6-scaled.webp" alt="Guia do Comportamento">
+      <h3>Desbloqueando agora o Guia do Comportamento, com</h3>
+      <ul class="checkout-list">
+        <li><img src="imagens/setaAmarela.svg" alt="">+60 aulas</li>
+        <li><img src="imagens/setaAmarela.svg" alt="">Material de apoio</li>
+        <li><img src="imagens/setaAmarela.svg" alt="">Grupo de acompanhamento</li>
+        <li><img src="imagens/setaAmarela.svg" alt="">Conteúdo de volta às aulas</li>
+        <li><img src="imagens/setaAmarela.svg" alt="">Acesso vitalício</li>
+      </ul>
+
+      <div class="old-price-row">
+        <span class="label">Preço antigo</span>
+        <span class="price">R$1318</span>
+      </div>
+
+      <div class="discount-box">
+        <h4>DESCONTO PARA ESSA TURMA:</h4>
+        <div class="price-big">R$97 à vista</div>
+        <div class="installments">ou 12x de R$10,03</div>
+      </div>
+
+      <a class="btn btn-green" href="https://pay.kiwify.com.br/p4RpOPO">QUERO MEU GUIA AGORA</a>
+    </div>
+
+    <div class="guarantee-row">
+      <img class="badge" src="imagens/Subtract.svg" alt="Garantia">
+      <div class="text-col">
+        <h2>TODO O RISCO É NOSSO! Você tem 7 dias para testar sem pressa, sem risco e com total segurança.</h2>
+        <p>Você pode entrar no guia, explorar o conteúdo e avaliar se ele faz sentido para a sua realidade. Se não gostar, <b>devolvemos o seu dinheiro</b> (mas a gente duvida que isso vá acontecer).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S9 VIDEO CTA ===================== -->
+<section class="s9">
+  <div class="wrap s9-row">
+    <div class="s9-video-col">
+      <video class="lazy-video" autoplay loop muted playsinline>
+        <source media="(max-width: 767px)" src="imagens/videos/video2_mobile.mp4" type="video/mp4">
+        <source media="(min-width: 768px)" src="imagens/videos/video2_desktop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="s9-text-col">
+      <h2>Acabe com a ansiedade antes de entrar na sala de aula e saiba exatamente o que fazer em cada situação.</h2>
+      <a href="#pay" class="btn btn-red">DESBLOQUEAR MEU GUIA</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S10 SOBRE HELENA ===================== -->
+<section class="s10">
+  <div class="wrap">
+    <div class="about-card">
+      <figure><img src="imagens/image-32.png" alt="Helena Costa"></figure>
+      <div class="about-text">
+        <h2>Quem é Helena Costa</h2>
+        <p>Helena Costa é <b>mestre em Educação da Primeira Infância, formada na Austrália.</b></p>
+        <p>Ao longo dos últimos 10 anos, ajudou milhares de professores a recuperar autoridade, escuta e prazer de ensinar, com uma abordagem prática, acolhedora e baseada em ciência.</p>
+        <p>Mas antes de ensinar tudo isso, ela também passou por uma fase em que pensou em desistir. E foi superando essa fase que encontrou uma missão: ajudar outros professores a viver o mesmo.</p>
+        <p>Helena acredita que todo professor merece dar aula sem precisar gritar, sem ameaçar e sem se esgotar emocionalmente.</p>
+        <p>Hoje, você pode ter acesso a uma parte do seu legado.</p>
+        <div class="social-row">
+          <img src="imagens/instagram.webp" alt="Instagram">
+          <img src="imagens/tiktok.webp" alt="TikTok">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S11 FAQ ===================== -->
+<section class="s11">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <details>
+        <summary>O que é o Guia do Comportamento na Sala de Aula?</summary>
+        <div class="faq-body"><p>É um material completo de apoio para professores, com aulas gravadas + PDF de consulta, criado para mostrar o motivo por trás dos principais comportamentos em sala e como agir em cada caso, de acordo com a faixa etária do aluno.</p></div>
+      </details>
+      <details>
+        <summary>Esse guia é para qual tipo de professor?</summary>
+        <div class="faq-body"><p>Ele foi criado para professores que trabalham com alunos de 0 a 14 anos, do Maternal ao Ensino Médio. Também pode ajudar em escolas públicas, escolas particulares, aulas de reforço e outros contextos de interação professor-aluno.</p></div>
+      </details>
+      <details>
+        <summary>O guia serve só para crianças pequenas?</summary>
+        <div class="faq-body"><p>Não. O conteúdo foi organizado por etapa escolar e cobre desde comportamentos típicos do Maternal, como choro, mordida e dificuldade de transição, até questões de Fundamental 2 e Ensino Médio, como desafio à autoridade, sarcasmo, conflitos verbais, isolamento e resistência ao trabalho em grupo.</p></div>
+      </details>
+      <details>
+        <summary>O que eu vou encontrar dentro do guia?</summary>
+        <div class="faq-body"><p>Você recebe:</p><ul><li>Curso completo com mais de 60 aulas e recursos;</li><li>Conteúdo organizado por faixa etária;</li><li>Explicação do que está por trás de cada comportamento;</li><li>Orientação prática de intervenção;</li><li>Material em PDF para consulta;</li><li>Apostila completa e materiais extras; acesso vitalício.</li></ul></div>
+      </details>
+      <details>
+        <summary>Como o conteúdo é organizado?</summary>
+        <div class="faq-body"><p>O guia começa com uma base introdutória sobre comportamento e desenvolvimento, depois avança por etapas escolares:</p><ul><li>Maternal;</li><li>Educação Infantil;</li><li>Ensino Fundamental 1;</li><li>Ensino Fundamental 2;</li><li>Ensino Médio.</li></ul><p>Isso facilita tanto o estudo completo quanto a consulta mais rápida no dia a dia.</p></div>
+      </details>
+      <details>
+        <summary>É um curso para assistir do começo ao fim ou um material para consultar?</summary>
+        <div class="faq-body"><p>Os dois. Você pode assistir em ordem, para construir uma visão mais ampla sobre comportamento, ou pode consultar diretamente o módulo e o tema que mais fazem sentido para a sua realidade naquele momento. A estrutura foi pensada justamente para funcionar como formação e como apoio prático.</p></div>
+      </details>
+      <details>
+        <summary>O conteúdo é muito teórico?</summary>
+        <div class="faq-body"><p>Não. O material tem base científica, com referência à neurociência na sala de aula, mas foi desenhado para aplicação prática. A proposta não é entregar teoria solta, e sim ajudar o professor a entender o comportamento e agir melhor na prática.</p></div>
+      </details>
+      <details>
+        <summary>O guia traz só frases prontas?</summary>
+        <div class="faq-body"><p>Não. Ele não foi construído como uma coleção de frases para decorar. A proposta é mostrar:</p><ul><li>O que está por trás do comportamento;</li><li>Como interpretar a situação;</li><li>E como escolher a intervenção mais adequada para aquela idade e aquele contexto.</li></ul></div>
+      </details>
+      <details>
+        <summary>Isso funciona mesmo com turma agitada?</summary>
+        <div class="faq-body"><p>Essa é justamente uma das propostas centrais do material. A página deixa claro que o guia foi pensado para funcionar mesmo com crianças e adolescentes agitados, em escolas públicas ou privadas, e até quando o professor sente que já perdeu o controle da situação.</p></div>
+      </details>
+      <details>
+        <summary>Eu preciso ter muito tempo para aproveitar o conteúdo?</summary>
+        <div class="faq-body"><p>Não. O material foi estruturado com rotinas curtas, aulas organizadas e conteúdo consultável, para caber melhor na rotina real do professor. A ideia é facilitar a aplicação, não criar mais sobrecarga.</p></div>
+      </details>
+      <details>
+        <summary>Vou conseguir aplicar mesmo sem apoio da escola?</summary>
+        <div class="faq-body"><p>O guia foi criado exatamente para o professor que muitas vezes precisa lidar sozinho com o comportamento em sala. Ele não depende de uma estrutura ideal para ser útil. A proposta é te dar mais clareza e repertório para agir melhor com os recursos que você já tem.</p></div>
+      </details>
+      <details>
+        <summary>O que diferencia esse guia de outros conteúdos sobre comportamento?</summary>
+        <div class="faq-body"><p>O diferencial está na estrutura. Ele não é:</p><ul><li>Só mais um curso sobre comportamento infantil;</li><li>Um material vago cheio de dicas soltas;</li><li>Uma lista de frases prontas.</li></ul><p>Ele é um guia prático, organizado por faixa etária e por situações reais do cotidiano escolar, com foco em compreensão e intervenção.</p></div>
+      </details>
+      <details>
+        <summary>O acesso é por quanto tempo?</summary>
+        <div class="faq-body"><p>O acesso é imediato e vitalício. Você pode entrar agora e continuar consultando o material sempre que precisar.</p></div>
+      </details>
+      <details>
+        <summary>O que vem de bônus?</summary>
+        <div class="faq-body"><p>Entrando hoje, você também recebe:</p><ul><li><b>Grupo VIP no WhatsApp,</b> para troca de experiências e dúvidas;</li><li><b>Volta às Aulas Serena,</b> com 5 aulas exclusivas para ajudar na retomada do vínculo, da tranquilidade e da regulação da turma.</li></ul></div>
+      </details>
+      <details>
+        <summary>Como funciona a garantia?</summary>
+        <div class="faq-body"><p>Você tem <strong>7 dias</strong> para entrar, explorar o conteúdo e avaliar se ele faz sentido para a sua realidade. Se não gostar, pode pedir o reembolso dentro desse prazo.</p></div>
+      </details>
+      <details>
+        <summary>Quanto custa o acesso?</summary>
+        <div class="faq-body"><p>Hoje, o Guia do Comportamento pode ser desbloqueado por:</p><ul><li><b>R$ 97 à vista</b>;</li><li>ou <b>12x de R$ 10,03</b>.</li></ul></div>
+      </details>
+      <details>
+        <summary>E se eu der aula só para uma faixa etária?</summary>
+        <div class="faq-body"><p>Ainda assim vale a pena, porque o conteúdo é separado por etapa escolar. Você pode ir direto ao módulo que faz sentido para a sua rotina e usar o restante como repertório complementar.</p></div>
+      </details>
+      <details>
+        <summary>Eu vou ter que procurar muito dentro da plataforma para achar o que preciso?</summary>
+        <div class="faq-body"><p>O material foi organizado para facilitar o acesso por faixa etária e por comportamento, justamente para que você encontre com mais rapidez o tema que precisa consultar.</p></div>
+      </details>
+    </div>
+    <div class="cta-center"><a href="#pay" class="btn btn-red">DESBLOQUEAR MEU GUIA</a></div>
+  </div>
+</section>
+
+<footer>
+  <p>Helena Costa &ndash; Todos os Direitos Reservados</p>
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('a[href*="pay.kiwify.com"]');
+  var rastreio = "sck={{utm_source}}|{{utm_medium}}|{{utm_campaign}}|{{utm_content}}|{{utm_term}}&utm_source={{utm_source}}&utm_medium={{utm_medium}}&utm_campaign={{utm_campaign}}&utm_content={{utm_content}}&utm_term={{utm_term}}";
+  var params = new URLSearchParams(window.location.search);
+  function fill(template) {
+    return template.replace(/{{\s*(\w+)\s*}}/g, function (_, key) { return params.get(key) || ""; });
+  }
+  links.forEach(function (link) {
+    var original = link.getAttribute("href");
+    var track = fill(rastreio);
+    var arrURL = original.split("?");
+    var novoLink = arrURL.length === 1 ? original + "?" + track : arrURL[0] + "?" + track + "&" + arrURL[1];
+    link.setAttribute("href", novoLink);
+  });
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+  var videos = document.querySelectorAll("video.lazy-video");
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var video = entry.target;
+        video.play().catch(function () {});
+        observer.unobserve(video);
+      }
+    });
+  }, { rootMargin: "500px" });
+  videos.forEach(function (video) { observer.observe(video); });
+});
+</script>
+
+</body>
+</html>
