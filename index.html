@@ -585,7 +585,7 @@
         <div class="installments">ou 12x de R$10,03</div>
       </div>
 
-      <a class="btn btn-green" href="https://pay.kiwify.com.br/p4RpOPO">QUERO MEU GUIA AGORA</a>
+      <a class="btn btn-green" href="https://checkout.payt.com.br/7be51285e8a724de828cb13ab9ed8138">QUERO MEU GUIA AGORA</a>
     </div>
 
     <div class="guarantee-row">
@@ -722,8 +722,8 @@
 
 <script>
 (function () {
-  var links = document.querySelectorAll('a[href*="pay.kiwify.com"]');
-  var rastreio = "sck={{utm_source}}|{{utm_medium}}|{{utm_campaign}}|{{utm_content}}|{{utm_term}}&utm_source={{utm_source}}&utm_medium={{utm_medium}}&utm_campaign={{utm_campaign}}&utm_content={{utm_content}}&utm_term={{utm_term}}";
+  var links = document.querySelectorAll('a[href*="checkout.payt.com.br"]');
+  var rastreio = "utm_source={{utm_source}}&utm_medium={{utm_medium}}&utm_campaign={{utm_campaign}}&utm_content={{utm_content}}&utm_term={{utm_term}}";
   var params = new URLSearchParams(window.location.search);
   function fill(template) {
     return template.replace(/{{\s*(\w+)\s*}}/g, function (_, key) { return params.get(key) || ""; });
