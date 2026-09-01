@@ -78,6 +78,8 @@
   .btn-red:hover{ box-shadow:0 0 0 10px rgba(224,92,80,.45); }
   .btn-green{ background:var(--green); color:#fff; box-shadow:0 0 0 4px rgba(89,168,74,.35); }
   .btn-green:hover{ box-shadow:0 0 0 10px rgba(89,168,74,.3); }
+  .btn-outline{ background:transparent; color:var(--ink); border:2px solid var(--ink); }
+  .btn-outline:hover{ background:var(--ink); color:#fff; }
 
   .icon-item{ display:flex; align-items:center; gap:10px; }
   .icon-item img{ width:44px; height:auto; flex:none; }
@@ -256,6 +258,12 @@
   .faq .faq-body p{ font-size:1.05rem; }
   .s11 .cta-center{ text-align:center; }
 
+  /* ============ S12 Suporte ============ */
+  .s12{ background:#fff; }
+  .s12 h2{ font-size:2.5rem; max-width:680px; margin:0 auto 16px; }
+  .s12 p{ font-size:1.25rem; max-width:600px; margin:0 auto 32px; }
+  .support-actions{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; }
+
   /* ============ Footer ============ */
   footer{ background:var(--pink); padding:32px; text-align:center; }
   footer p{ font-family:var(--font-footer); font-size:0.87rem; font-weight:500; margin:0; }
@@ -306,6 +314,8 @@
     .price-list .price{ border-left:none; padding-left:0; align-self:flex-end; font-weight:600; }
     .price-total span{ font-size:2rem; }
     .btn{ display:block; text-align:center; }
+    .s12 p{ text-align:left; }
+    .support-actions{ flex-direction:column; }
   }
 </style>
 </head>
@@ -723,6 +733,18 @@
       </details>
     </div>
     <div class="cta-center"><a href="#pay" class="btn btn-red">DESBLOQUEAR MEU GUIA</a></div>
+  </div>
+</section>
+
+<!-- ===================== S12 SUPORTE ===================== -->
+<section class="s12">
+  <div class="wrap center">
+    <h2>Ainda com dúvidas? Estamos aqui pra te ajudar.</h2>
+    <p>Se precisar de qualquer coisa antes ou depois de garantir o seu acesso, fale com a nossa equipe. Você não vai ficar sozinho(a) nessa.</p>
+    <div class="support-actions">
+      <a class="btn btn-green" href="https://api.whatsapp.com/message/57TSTYVN3SMGE1?autoload=1&amp;app_absent=0&amp;vtid=v3_ba07d433-0d73-4bd3-8c40-d6fe16b812a6_6a8cfce794011641887174b0_1204_s-2&amp;utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn btn-outline" href="mailto:contato@lumiieduca.com.br">contato@lumiieduca.com.br</a>
+    </div>
   </div>
 </section>
 
